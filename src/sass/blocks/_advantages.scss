@@ -1,0 +1,93 @@
+.advantages {
+    padding: 70px 0 80px 0;
+    background-color: #f6f6f6;
+    &__wrapper {
+        margin-top: 65px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 238px;
+				&:nth-of-type(2) {
+				 .advantages__icon {
+						animation-name: heartbeat;
+						animation-duration: 1.5s;
+						animation-timing-function: ease;
+						animation-iteration-count: infinite;
+					}
+				}
+    }
+		&__content {
+			text-align: center;
+		}
+    &__subtitle {
+        margin-top: 38px;
+        color: #0d0d0d;
+        font-size: clamp(0.875rem, 0.755rem + 0.49vw, 1.125rem);
+        font-weight: 700;
+    }
+    &__descr {
+        margin-top: 26px;
+        color: #0d0d0d;
+        font-size: clamp(0.75rem, 0.69rem + 0.25vw, 0.875rem);
+        font-weight: 300;
+        text-align: center;
+        a {
+            color: #ff0000;
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+	.advantages {
+    padding: 40px 0 50px 0;
+
+		&__wrapper {
+			margin-top: 50px;
+		}
+
+		&__item {
+			max-width: 200px;
+	}
+	}
+}
+
+@media (max-width: 780px) {
+
+	.advantages {
+	
+		&__wrapper {
+			flex-wrap: wrap;
+			margin-top: 30px;
+			row-gap: 20px;
+		}
+
+		&__item {
+			flex-direction: row;
+			max-width: 100%;
+			column-gap: 20px;
+		}
+
+		&__content {
+			text-align: left;
+		}
+
+		&__subtitle {
+		margin-top: 0;
+		}
+
+		&__descr {
+		margin-top: 20px;
+		text-align: left;
+			a {
+			display: inline-block;
+			}
+		}
+
+	}
+
+}

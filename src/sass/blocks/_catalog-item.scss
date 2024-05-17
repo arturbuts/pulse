@@ -1,0 +1,146 @@
+.catalog-item {
+	width: 300px;
+	min-height: 440px;
+	border: 2px solid #E8E8E8;
+	padding: 20px;
+
+	overflow: hidden;
+
+	&__img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+		height: 200px;
+
+		margin-bottom: 15px;
+	}
+	&__subtitle {
+		color: #0D0D0D;
+		text-align: center;
+		font-size: clamp(0.75rem, 0.63rem + 0.49vw, 1rem);
+		font-weight: 700;
+
+		margin-bottom: 16px;
+	}
+
+	&__descr {
+		color: #0D0D0D;
+		text-align: center;
+		font-size: clamp(0.75rem, 0.69rem + 0.25vw, 0.875rem);
+		font-weight: 300;
+
+		margin-bottom: 17px;
+	}
+
+	&__link {
+		display: block;
+		color: $main-color;
+		text-align: center;
+		font-size: clamp(0.75rem, 0.69rem + 0.25vw, 0.875rem);
+		font-weight: 500;
+		line-height: 14px; /* 100% */
+		text-decoration-line: underline;
+		text-align: center;
+
+		&:hover {
+			color: $main-color;
+		}
+	}
+	hr {
+		background-color: #E8E8E8;
+		margin: 20px 0;
+		border-bottom: none;
+	}
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__prices {
+		padding-top: 7px;
+	}
+	&__old-price {
+		text-decoration: line-through;
+		color: #555;
+		font-size: clamp(0.75rem, 0.69rem + 0.25vw, 0.875rem);
+		font-weight: 300;
+		line-height: 14px; /* 100% */
+		margin-bottom: 2px;
+	}
+	&__price {
+		color: #050505;
+		font-size: clamp(1rem, 0.88rem + 0.49vw, 1.25rem);
+		font-weight: 700;
+		line-height: 20px; /* 100% */
+	}
+	&__wrapper {
+		display: flex;
+		width: calc(200% + 40px);
+	}
+	&__front {
+		width: 50%;
+		margin-right: 0px;
+		transform: translateX(100%);
+
+		transition: 0.5s all;
+
+		&--active {
+			transform: translateX(0%);
+			margin-right: 20px;
+		}
+	}
+	&__back {
+		position: relative;
+		width: 50%;
+		margin-left: 20px;
+		transform: translateX(0%);
+
+		padding-right: 20px;
+		padding-left: 19px;
+		margin-bottom: 0;
+
+		list-style-type: none;
+
+		transition: 0.5s all;
+
+		&--active {
+			transform: translateX(-100%);
+			margin-left: 0px;
+		}
+
+		li {
+			position: relative;
+			color: #555;
+			font-size: clamp(0.75rem, 0.69rem + 0.25vw, 0.875rem);
+			font-weight: 300;
+			margin-bottom: 20px;
+			&::before {
+				content: "";
+
+				position: absolute;
+				width: 5px;
+				height: 5px;
+				background-color: $main-color;
+
+				left: -14px;
+				top: 7px;
+
+			}
+		}
+	}
+	&__back-btn {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(calc(-50% - 19px));
+		display: block;
+		color: $main-color;
+		font-size: clamp(0.75rem, 0.69rem + 0.25vw, 0.875rem);
+		font-weight: 500;
+		text-decoration: underline;
+		text-transform: uppercase;
+		&:hover {
+			color: $main-color;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+.title {
+    color: #0d0d0d;
+    font-size: clamp(1.5rem, 1.319rem + 0.74vw, 1.875rem);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    &_left {
+        color: #fff;
+        font-size: clamp(1.875rem, 1.694rem + 0.74vw, 2.25rem);
+        text-align: left;
+    }
+}
